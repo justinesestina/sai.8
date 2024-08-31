@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my love</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #5585b5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    padding-top: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.box {
+    background-color: #93e4c1;
+    color: #2115c7;
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: #5585b5;
+}
+
+.popup {
+    font-family: "Lucida Console", "Courier New", monospace;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #38926c;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(41, 13, 145, 0.5);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup p {
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .box {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+    body{
+        padding-bottom: 60px; /* Add space at the bottom to prevent overlap */
+    }
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" onclick="showMessage(1)">1</div>
+        <div class="box" onclick="showMessage(2)">2</div>
+        <div class="box" onclick="showMessage(3)">3</div>
+        <div class="box" onclick="showMessage(4)">4</div>
+        <div class="box" onclick="showMessage(5)">5</div>
+        <div class="box" onclick="showMessage(6)">6</div>
+        <div class="box" onclick="showMessage(7)">7</div>
+        <div class="box" onclick="showMessage(8)">8</div>
+        <div class="box" onclick="showMessage(9)">9</div>
+        <div class="box" onclick="showMessage(10)">10</div>
+        <div class="box" onclick="showMessage(11)">11</div>
+        <div class="box" onclick="showMessage(12)">12</div>
+        <div class="box" onclick="showMessage(13)">13</div>
+        <div class="box" onclick="showMessage(14)">14</div>
+        <div class="box" onclick="showMessage(15)">15</div>
+        <div class="box" onclick="showMessage(16)">16</div>
+        <div class="box" onclick="showMessage(17)">17</div>
+        <div class="box" onclick="showMessage(18)">18</div>
+        <div class="box" onclick="showMessage(19)">19</div>
+        <div class="box" onclick="showMessage(20)">20</div>
+        <div class="box" onclick="showMessage(21)">21</div>
+        <div class="box" onclick="showMessage(22)">22</div>
+        <div class="box" onclick="showMessage(23)">23</div>
+        <div class="box" onclick="showMessage(24)">24</div>
+        <div class="box" onclick="showMessage(25)">25</div>
+        <div class="box" onclick="showMessage(26)">26</div>
+        <div class="box" onclick="showMessage(27)">27</div>
+        <div class="box" onclick="showMessage(28)">28</div>
+        <div class="box" onclick="showMessage(29)">29</div>
+        <div class="box" onclick="showMessage(30)">30</div>
+        <div class="box" onclick="showMessage(31)">31</div>
+        <div class="box" onclick="showMessage(32)">32</div>
+        <div class="box" onclick="showMessage(33)">33</div>
+        <div class="box" onclick="showMessage(34)">34</div>
+        <div class="box" onclick="showMessage(35)">35</div>
+        <div class="box" onclick="showMessage(36)">36</div>
+        <div class="box" onclick="showMessage(37)">37</div>
+        <div class="box" onclick="showMessage(38)">38</div>
+        <div class="box" onclick="showMessage(39)">39</div>
+        <div class="box" onclick="showMessage(40)">40</div>
+        <div class="box" onclick="showMessage(41)">41</div>
+        <div class="box" onclick="showMessage(42)">42</div>
+        <div class="box" onclick="showMessage(43)">43</div>
+        <div class="box" onclick="showMessage(44)">44</div>
+        <div class="box" onclick="showMessage(45)">45</div>
+        <div class="box" onclick="showMessage(46)">46</div>
+        <div class="box" onclick="showMessage(47)">47</div>
+        <div class="box" onclick="showMessage(48)">48</div>
+        <div class="box" onclick="showMessage(49)">49</div>
+        <div class="box" onclick="showMessage(50)">50</div>
+        <div class="box" onclick="showMessage(51)">51</div>
+        <div class="box" onclick="showMessage(52)">52</div>
+        <div class="box" onclick="showMessage(53)">53</div>
+        <div class="box" onclick="showMessage(54)">54</div>
+        <div class="box" onclick="showMessage(55)">55</div>
+        <div class="box" onclick="showMessage(56)">56</div>
+        <div class="box" onclick="showMessage(57)">57</div>
+        <div class="box" onclick="showMessage(58)">58</div>
+        <div class="box" onclick="showMessage(59)">59</div>
+        <div class="box" onclick="showMessage(60)">60</div>
+        <div class="box" onclick="showMessage(61)">61</div>
+        <div class="box" onclick="showMessage(62)">62</div>
+        <div class="box" onclick="showMessage(63)">63</div>
+        <div class="box" onclick="showMessage(64)">64</div>
+        <div class="box" onclick="showMessage(65)">65</div>
+        <div class="box" onclick="showMessage(66)">66</div>
+        <div class="box" onclick="showMessage(67)">67</div>
+        <div class="box" onclick="showMessage(68)">68</div>
+        <div class="box" onclick="showMessage(69)">69</div>
+        <div class="box" onclick="showMessage(70)">70</div>
+        <div class="box" onclick="showMessage(71)">71</div>
+        <div class="box" onclick="showMessage(72)">72</div>
+        <div class="box" onclick="showMessage(73)">73</div>
+        <div class="box" onclick="showMessage(74)">74</div>
+        <div class="box" onclick="showMessage(75)">75</div>
+        <div class="box" onclick="showMessage(76)">76</div>
+        <div class="box" onclick="showMessage(77)">77</div>
+        <div class="box" onclick="showMessage(78)">78</div>
+        <div class="box" onclick="showMessage(79)">79</div>
+        <div class="box" onclick="showMessage(80)">80</div>
+        <div class="box" onclick="showMessage(81)">81</div>
+        <div class="box" onclick="showMessage(82)">82</div>
+        <div class="box" onclick="showMessage(83)">83</div>
+        <div class="box" onclick="showMessage(84)">84</div>
+        <div class="box" onclick="showMessage(85)">85</div>
+        <div class="box" onclick="showMessage(86)">86</div>
+        <div class="box" onclick="showMessage(87)">87</div>
+        <div class="box" onclick="showMessage(88)">88</div>
+        <div class="box" onclick="showMessage(89)">89</div>
+        <div class="box" onclick="showMessage(90)">90</div>
+        <div class="box" onclick="showMessage(91)">91</div>
+        <div class="box" onclick="showMessage(92)">92</div>
+        <div class="box" onclick="showMessage(93)">93</div>
+        <div class="box" onclick="showMessage(94)">94</div>
+        <div class="box" onclick="showMessage(95)">95</div>
+        <div class="box" onclick="showMessage(96)">96</div>
+        <div class="box" onclick="showMessage(97)">97</div>
+        <div class="box" onclick="showMessage(98)">98</div>
+        <div class="box" onclick="showMessage(99)">99</div>
+        <div class="box" onclick="showMessage(100)">100</div>
+        <div class="box" onclick="showMessage(101)">101</div>
+        <div class="box" onclick="showMessage(102)">102</div>
+        <div class="box" onclick="showMessage(103)">103</div>
+        <div class="box" onclick="showMessage(104)">104</div>
+        <div class="box" onclick="showMessage(105)">105</div>
+        <div class="box" onclick="showMessage(106)">106</div>
+        <div class="box" onclick="showMessage(107)">107</div>
+        <div class="box" onclick="showMessage(108)">108</div>
+        <div class="box" onclick="showMessage(109)">109</div>
+        <div class="box" onclick="showMessage(110)">110</div>
+        <div class="box" onclick="showMessage(111)">111</div>
+        <div class="box" onclick="showMessage(112)">112</div>
+        <div class="box" onclick="showMessage(113)">113</div>
+        <div class="box" onclick="showMessage(114)">114</div>
+        <div class="box" onclick="showMessage(115)">115</div>
+        <div class="box" onclick="showMessage(116)">116</div>
+        <div class="box" onclick="showMessage(117)">117</div>
+        <div class="box" onclick="showMessage(118)">118</div>
+        <div class="box" onclick="showMessage(119)">119</div>
+        <div class="box" onclick="showMessage(120)">120</div>
+        <div class="box" onclick="showMessage(121)">121</div>
+        <div class="box" onclick="showMessage(122)">122</div>
+        <div class="box" onclick="showMessage(123)">123</div>
+        <div class="box" onclick="showMessage(124)">124</div>
+        <div class="box" onclick="showMessage(125)">125</div>
+        <div class="box" onclick="showMessage(126)">126</div>
+        <div class="box" onclick="showMessage(127)">127</div>
+        <div class="box" onclick="showMessage(128)">128</div>
+        <div class="box" onclick="showMessage(129)">129</div>
+        <div class="box" onclick="showMessage(130)">130</div>
+        <div class="box" onclick="showMessage(131)">131</div>
+        <div class="box" onclick="showMessage(132)">132</div>
+        <div class="box" onclick="showMessage(133)">133</div>
+        <div class="box" onclick="showMessage(134)">134</div>
+        <div class="box" onclick="showMessage(135)">135</div>
+        <div class="box" onclick="showMessage(136)">136</div>
+        <div class="box" onclick="showMessage(137)">137</div>
+        <div class="box" onclick="showMessage(138)">138</div>
+        <div class="box" onclick="showMessage(139)">139</div>
+        <div class="box" onclick="showMessage(140)">140</div>
+        <div class="box" onclick="showMessage(141)">141</div>
+        <div class="box" onclick="showMessage(142)">142</div>
+        <div class="box" onclick="showMessage(143)">143</div>        
+    </div>
+
+    <!-- Pop-up message -->
+    <div id="popup" class="popup">
+        <span id="close" class="close" onclick="closePopup()">&times;</span>
+        <p id="message"></p>
+    </div>
+
+    <script>
+     function showMessage(number) {
+    const messages = {
+        1: "happy monthsary, my baby! read mo lang po each box, okay? kahit ano click mo :> ",
+        2: "not your birthday, but every month feels like a celebration because of you. happy 8 months!",
+        3: "every moment from day one to today has been the most precious of my life.",
+        4: "even after 8 months, my heart races just thinking of you.",
+        5: "these 8 months have made me realize, life without you isn’t an option.",
+        6: "for 8 months, your smile has been my brightest light.",
+        7: "8 months and I still feel like the luckiest person ever to have you.",
+        8: "these 8 months have proven that you are the missing piece to my heart.",
+        9: "everything just falls into place with you, and these 8 months have been proof of that.",
+        10: "8 months and counting, and I know you’re my forever love.",
+        11: "you’ve been my greatest adventure these past 8 months.",
+        12: "each day of these 8 months, my love for you only grows stronger.",
+        13: "I've been so grateful for you, especially these past 8 months.",
+        14: "for 8 months now, you’ve been the reason I wake up smiling.",
+        15: "you make every day better, and it’s been incredible experiencing that for 8 months.",
+        16: "I'm happiest when I'm with you, and that’s been true for 8 months.",
+        17: "you are my dream come true, and I've cherished every month of our journey.",
+        18: "you make life beautiful, and these 8 months have been a testament to that.",
+        19: "I love everything about you, and every month with you makes me love you more.",
+        20: "you make my heart happy, and I’m grateful for every month we’ve shared.",
+        21: "you are everything to me, and our 8 months together have shown me that.",
+        22: "I cherish every moment with you, especially the ones we’ve had over these 8 months.",
+        23: "you make my life complete, and I've felt that more and more each month.",
+        24: "I fall more in love with you every day, and our 8 months have been proof of that.",
+        25: "you are my soulmate, and our journey together has been incredible for 8 months.",
+        26: "you are my one and only, and I've been blessed to share these 8 months with you.",
+        27: "I love you to the moon and back, and each month with you is a new adventure.",
+        28: "you make me a better person, and our 8 months together have been transformative.",
+        29: "you are my lifelong happiness, and every month with you has reinforced that.",
+        30: "you are my best friend and my love, and I’m thankful for these 8 months together.",
+        31: "you are my forever love, and I've felt that more with each passing month.",
+        32: "I love being with you, and our 8 months together have been the best.",
+        33: "you are my special one, and I’m so glad we’ve shared these 8 months.",
+        34: "I will always choose you, and I've loved every month we've spent together.",
+        35: "you are the love of my life, and I've experienced that deeply over these 8 months.",
+        36: "you are the desire of my heart, and I've felt that more and more as we've spent these 8 months together.",
+        37: "I'm so happy to have you, and these 8 months have been a dream come true.",
+        38: "you are my greatest joy, and every month with you is a blessing.",
+        39: "you make my life worth living, and I've seen that more clearly over these 8 months.",
+        40: "I love your laugh, and every moment with you makes me smile.",
+        41: "you are my sweet escape, and our 8 months together have been a beautiful journey.",
+        42: "I am so in love with you, and every day of these 8 months has been a testament to that.",
+        43: "you are my favorite place, and our time together has been wonderful.",
+        44: "you are my world, and these 8 months have been the best part of my life.",
+        45: "you make me believe in love, and our 8 months have shown me how beautiful it can be.",
+        46: "I can’t wait to spend forever with you, starting with these amazing 8 months.",
+        47: "you are my reason for everything, and I've felt that deeply over these 8 months.",
+        48: "you are my happy place, and every month with you has been pure joy.",
+        49: "you are my sunshine on a rainy day, and I've felt that every day of these 8 months.",
+        50: "I love you the most, and our 8 months together have been a testament to that.",
+        51: "you are my perfect match, and I've realized that more with each month we've spent together.",
+        52: "I am so thankful for you, especially after these incredible 8 months.",
+        53: "you make me feel special, and I've felt that more and more with each month.",
+        54: "you are my best decision, and these 8 months have proven that.",
+        55: "you are my safe haven, and I've felt that every day of these 8 months.",
+        56: "you are my light in the dark, and our 8 months together have been full of love.",
+        57: "I am so lucky to love you, and every month has shown me how special our love is.",
+        58: "you are my better half, and I've felt that more with each passing month.",
+        59: "you make my heart sing with joy, and every moment of these 8 months has been magical.",
+        60: "you are my favorite person, and our 8 months together have been the best part of my life.",
+        61: "I love you endlessly, and these 8 months have been proof of that.",
+        62: "you are everything to me and more, and our 8 months together have been amazing.",
+        63: "I am so proud of you, and our 8 months together have been a joy.",
+        64: "you make me feel whole, and every month with you has been incredible.",
+        65: "you are my reason to smile, and I've felt that more with every month we've shared.",
+        66: "you brighten my life, and our 8 months together have been a beautiful journey.",
+        67: "I love your kind heart, and every month with you has been a blessing.",
+        68: "you are my greatest treasure, and I've felt that more and more with each month.",
+        69: "you are my love story, and these 8 months have been a dream come true.",
+        70: "you are my forever favorite, and I've loved every moment of these 8 months.",
+        71: "I'm so lucky to have found you, and our 8 months together have been amazing.",
+        72: "you are my happy ending, and every month with you has been a blessing.",
+        73: "you make every day special, and our 8 months together have been wonderful.",
+        74: "you are my perfect love, and I've felt that deeply over these 8 months.",
+        75: "I love your beautiful soul, and every month with you has been a blessing.",
+        76: "you are my sweet memory, and our 8 months together have been a treasure.",
+        77: "you make my world go round, and I've felt that every day of these 8 months.",
+        78: "you are the home of my heart, and every month with you has been incredible.",
+        79: "I'm so thankful to love you, and every month has been a blessing.",
+        80: "you are my biggest blessing, and our 8 months together have been wonderful.",
+        81: "you make me believe in magic, and our 8 months together have been a dream.",
+        82: "you are my greatest gift, and every day with you has been amazing.",
+        83: "you are my true love, and I've felt that deeply over these 8 months.",
+        84: "you are my life's joy, and I've felt that deeply over these 8 months.",
+        85: "you make my heart beat with joy, and every month with you has been amazing.",
+        86: "I'm so happy to share my life with you, and these 8 months have been perfect.",
+        87: "you are my true love, and our 8 months together have been wonderful.",
+        88: "you make every day worth it, and I've seen that more with each month.",
+        89: "I love you more than words can say, and every month with you is a blessing.",
+        90: "you are my greatest adventure, and our 8 months together have been incredible.",
+        91: "you are my love, my life, and I've felt that deeply over these 8 months.",
+        92: "you are my treasure, and every month with you has been a gift.",
+        93: "you are my heart's desire, and I've felt that deeply over these 8 months.",
+        94: "you make every day special, and our 8 months together have been wonderful.",
+        95: "you are my joy, my happiness, and every day with you is a blessing.",
+        96: "I love your beautiful soul, and every month with you is a treasure.",
+        97: "you are my soulmate, and our 8 months together have been amazing.",
+        98: "you are my one and only, and I've felt that deeply over these 8 months.",
+        99: "you are my forever love, and our 8 months together have been a dream.",
+        100: "you make my world brighter, and every month with you is a blessing.",
+        101: "you are my happiness, and every day with you has been amazing.",
+        102: "you are my best friend, my love, and every moment with you is a blessing.",
+        103: "you are my forever, and I've felt that deeply over these 8 months.",
+        104: "you are my everything, and every day with you is a dream.",
+        105: "you are my heart, my home, and every moment with you is a gift.",
+        106: "I love your kind heart, and every month with you is a blessing.",
+        107: "you are my greatest love, and our 8 months together have been wonderful.",
+        108: "you are my love, my life, and I've felt that deeply over these 8 months.",
+        109: "you make me believe in love, and our 8 months together have been incredible.",
+        110: "you are my true love, my soulmate, and every day with you is amazing.",
+        111: "you make me feel alive, and every month with you is a blessing.",
+        112: "you are my forever favorite, and I've felt that deeply over these 8 months.",
+        113: "you are my love story, and every day with you is a dream come true.",
+        114: "you are my happiness, and our 8 months together have been perfect.",
+        115: "you are my heart, my home, and every moment with you is a treasure.",
+        116: "I love you more than words can say, and our 8 months together have been wonderful.",
+        117: "you are my greatest adventure, and every day with you is amazing.",
+        118: "you are my one true love, and our 8 months together have been incredible.",
+        119: "you make my heart beat with joy, and every month with you is a blessing.",
+        120: "you are my perfect match, and I've felt that more with each passing month.",
+        121: "you are my true love, my soulmate, and every day with you is amazing.",
+        122: "you are my joy, my happiness, and every month with you is a blessing.",
+        123: "you are my love story, and our 8 months together have been perfect.",
+        124: "you are my heart, my home, and every day with you is a treasure.",
+        125: "you make every moment special, and our 8 months together have been wonderful.",
+        126: "you are my greatest gift, and every moment with you is a blessing.",
+        127: "you are my soulmate, and our 8 months together have been amazing.",
+        128: "you are my one and only, and every month with you is a dream come true.",
+        129: "you are my happiness, and every day with you is a blessing.",
+        130: "you make my world brighter, and our 8 months together have been perfect.",
+        131: "you are my love, my life, and every day with you is amazing.",
+        132: "you are my best friend, and our 8 months together have been wonderful.",
+        133: "you are my heart's desire, and every day with you is a dream.",
+        134: "you are my perfect match, and every month with you is a blessing.",
+        135: "you make every moment special, and our 8 months together have been wonderful.",
+        136: "you are my one true love, and every day with you is amazing.",
+        137: "you are my heart, my home, and every moment with you is a gift.",
+        138: "you are my happiness, and our 8 months together have been perfect.",
+        139: "you are my love story, and every day with you is a dream come true.",
+        140: "you are my joy, my happiness, and every moment with you is a blessing.",
+        141: "you are my perfect match, and our 8 months together have been wonderful.",
+        142: "you make my heart beat with joy, and every day with you is a gift.",
+        143: "you are my forever love, and our 8 months together have been a dream come true. I love you so much!♡"
+    };
+
+    const message = document.getElementById('message');
+    message.textContent = messages[number] || "You are my everything.";
+
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+}
+
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+    </script>
+</body>
+</html>
